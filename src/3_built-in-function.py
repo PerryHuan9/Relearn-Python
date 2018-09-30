@@ -7,6 +7,7 @@ import math
 
 a = abs(-10)  # 10
 b = pow(2, 2)  # 4
+b1 = pow(2, 2, 5)  # 4返回2的二次方对5进行取余的结果  结果为4
 c = round(1.5)  # 2
 c1 = round(3 / 2)  # 2
 
