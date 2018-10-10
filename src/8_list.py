@@ -142,5 +142,7 @@ def text_4():
     print(f)
     i = list(f)
     print(i)
+    j = tuple()
+    print(j)
 
-# text_4()
+text_4()
