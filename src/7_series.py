@@ -177,4 +177,4 @@ def test_8():
     print('min(numbers):', numbers_min)
 
 
-test_8()
+# test_8()

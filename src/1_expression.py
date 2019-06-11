@@ -37,7 +37,7 @@ print('\'单引号中使用单引号也必须转义\'')
 # 5、str能以合理的方式将值转换为用户能够看懂的字符
 # repr通常会获得值的合法Python表达式
 print(str('hello\nword'))  # 显示出来的结果会换行,特殊字符编码转换为相应的字符
-print(repr('hello\nword'))  # 显示结果不会换行'hello\nword
+print(repr('hello\nword'))  # 显示结果不会换行'hello\nword'
 
 # 6、长字符串使用''' ''''包裹，在里面的所有特殊字符都不会被转换，而且可自由换行
 a3 = '''This is a very long string.It continus here.

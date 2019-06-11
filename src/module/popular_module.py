@@ -46,7 +46,7 @@ def test_fileinput():
 # Python time模块
 
 
-def test_time():
+def test_time(): 
     '''
     4、时间可以由包含九个元素的元组表示。
     这九个元素分别表示年、月、日、时、分、秒、星期、儒略日、夏令时
@@ -70,7 +70,7 @@ def test_time():
     print('Time out')
 
 
-# test_time()
+test_time()
 
 
 def test_random():
@@ -185,4 +185,4 @@ def test_shelve():
     user.run()
 
 
-test_shelve()
+# test_shelve()

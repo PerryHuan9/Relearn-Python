@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>websocket 测试</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+        .content-label {
+
+        }
+        #content {
+            margin-top: 50px;
+            width: 200px;
+            height: 100px;
+
+        }
+        .send {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>websocket 测试</h2>
+        <div class="ip">
+            <label for="ip">IP: </label>
+            <input type="text" onchange="handleInputChange(this)" id="ip"> 
+            <button onclick="handleClick()">连接</button>
+        </div>
+        <!-- <div>
+            <label class="content-label">显示内容: </label>
+            <textarea id="content"></textarea>
+        </div>
+        <div class="send">
+            <input type="text" onchange="handleSendChange(this)"> 
+            <button onclick="handleSendClick()">发送</button>
+        </div> -->
+    </div>
+    <script>
+        const ip = "127.0.0.1"
+        function handleInputChange($input) {
+            ip = $input.value;
+        }
+        let ws = null;
+        function handleClick() {
+            ws = new WebSocket('ws://127.0.0.1:8888')
+            ws.onopen = function() {
+                ws.send('一代天骄成吉思汗， 只识问弓射大雕');
+                alert('数据发送中');
+            }
+            ws.onmessage = function(event) {
+                alert(event.data);
+            }
+            ws.onclose = function() {
+                alert('连接已关闭');
+            }
+            ws.onerror = function(error) {
+                alert(`出错了:${error.toString()}`);
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
